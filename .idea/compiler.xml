@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="server" />
+        <module name="Admin-Service" />
+        <module name="service (1) (com.admin)" />
+        <module name="dxc-microservice" />
+        <module name="patientservice" />
+        <module name="Eureka-Server" />
+        <module name="service (2) (com.medical)" />
+        <module name="medicalservice" />
+        <module name="gateway" />
+        <module name="Patient-Service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Gate-Way" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Admin-Service" options="-parameters" />
+      <module name="Eureka-Server" options="-parameters" />
+      <module name="Gate-Way" options="-parameters" />
+      <module name="Patient-Service" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="medicalservice" options="-parameters" />
+      <module name="patientservice" options="-parameters" />
+      <module name="server" options="-parameters" />
+      <module name="service (1) (com.admin)" options="-parameters" />
+      <module name="service (2) (com.medical)" options="-parameters" />
+    </option>
+  </component>
+</project>

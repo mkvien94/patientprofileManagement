@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nurser Profile</title>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+   rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+  crossorigin="anonymous"> -->
+</head>
+<body>
+  <section class="header">
+    <!-- Navbar begin -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Nurser</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Patient Profile</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Link
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Contene infor begin-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="title">
+            <div class="card mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="../images/nurser2.jpeg" style="width: 50px" alt="nurser">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">KIM HUYE SYUN - NUR10001</h5>
+                    <p class="card-text">Department: 001</p>
+                    <p class="card-text"><small class="text-muted">
+                      <a href="#" class="card-link">get all</a>
+                    </small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="../images/logo1.jpg" style="width: 100px;" class="our-hospital" alt="hospital">
+        </div>
+      </div>
+    </div>
+    <!-- Content infor end -->
+
+    <!-- Create patient profile -->
+    <div class="container">
+        <div class="row">
+          <!-- create information of patient -->
+          <div class="patient">
+            <h1>PATIENT PROFILE</h1>
+          </div>
+          <div class="infor col-6">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="inputlastname" class="form-label">Last Name</label>
+                <input type="lastname" class="form-control" id="inputlastname" placeholder="A">
+              </div>
+              <div class="col-md-6">
+                <label for="inputfirstname" class="form-label">First name</label>
+                <input type="firstname" class="form-control" id="inputfirstname" placeholder="Nguyen Van">
+              </div>
+              <div class="col-md-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="male" id="gender" value="Male" checked>
+                  <label class="form-check-label" for="male">
+                    Male
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="femal" id="gender" value="Femal">
+                  <label class="form-check-label" for="femal">
+                    Female
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="TP.HCM">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">DOB</label>
+                <input type="date" class="form-control" id="inputdob">
+              </div>
+              <div class="col-md-6">
+                <label for="inputoccupation" class="form-label">Occupation</label>
+                <input type="text" class="form-control" id="inputCity" placeholder="office worker">
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Save</button>
+              </div>
+            </form>
+          </div>
+          <!-- end -->
+
+          <!-- history treatment of patient -->
+          <div class="col-6">
+            <form class="row g-3">
+                <div class="col-md-3">
+                  <label for="PatientID" class="form-label">Patient ID</label>
+                  <input type="text" class="form-control" id="patientID" placeholder="PT0001">
+                </div>
+                <div class="col-md-9">
+                  <label for="fullname" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="fullname" placeholder=" Nguyen Van A">
+                </div>
+                <div class="col-md-3">
+                  <label for="begindate" class="form-label">Begin Date</label>
+                  <input type="date" class="form-control" id="begindate" placeholder="03/03/2021">
+                </div>
+                <div class="col-md-3">
+                  <label for="enddate" class="form-label">End Date</label>
+                  <input type="date" class="form-control" id="enddate">
+                </div>
+                <div class="col-md-6">
+                  <label for="deseasesname" class="form-label">Deseases Name</label>
+                  <input type="text" class="form-control" id="deseasesname" placeholder="none">
+                </div>
+                <div class="col-md-6">
+                  <label for="medicationname" class="form-label">Medication name</label>
+                  <input type="text" class="form-control" id="medicationname" placeholder="none">
+                </div>
+                <div class="col-md-6">
+                  <label for="strength" class="form-label">Strength</label>
+                  <input type="text" class="form-control" id="strength" placeholder="xxmg">
+                </div>
+                <div class="col-md-6">
+                  <label for="reference" class="form-label">Reference</label>
+                  <input type="text" class="form-control" id="reference" placeholder="none">
+                </div>
+                <div class="col-md-6">
+                  <label for="reference" class="form-label">Results</label>
+                  <input type="text" class="form-control" id="reference" placeholder="none">
+                </div>
+                <div class="col-6">
+                  <label for="x-ray" class="form-label">X-Ray</label>
+                  <input class="form-control" type="file" id="x-ray">
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Comments</label>
+                  </div>
+                </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Save</button>
+              </div>
+            </form>
+          </div>
+          <!-- end -->
+        </div>
+    </div>
+  </section>
+
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script> -->
+</body>
+</html>
