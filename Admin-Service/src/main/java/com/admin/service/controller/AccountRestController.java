@@ -15,6 +15,7 @@ public class AccountRestController {
     private AccountService service;
 
    @GetMapping (path = "/login")
+   @CrossOrigin(origins = "http://localhost:4200")
     public ResponseEntity<AccountEntity> login (@RequestParam(name = "username") String username) {
         try {
            return new ResponseEntity<>(service.findByName(username), org.springframework.http.HttpStatus.valueOf(HttpStatus.SC_OK));
@@ -22,6 +23,14 @@ public class AccountRestController {
             return new ResponseEntity<>(org.springframework.http.HttpStatus.BAD_REQUEST);
         }
     }
+
+    @GetMapping(value = "/validate")
+    public ResponseEntity<String> validate(
+            @RequestParam(name = "username") String username,
+            @RequestParam(name = "password") String password) {
+        return ResponseEntity.ok(service.validate(username, password));
+    }
+
 
     @GetMapping (path = "/delete/{id}")
     public ResponseEntity<AccountEntity> deleteAccount (@PathVariable Long id) {

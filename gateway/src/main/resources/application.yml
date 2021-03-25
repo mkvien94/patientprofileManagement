@@ -1,0 +1,18 @@
+zuul:
+  ignoredPatterns: /, /login**, /error**, /auth/**
+  routes:
+    webapp:
+      path: /**
+      url: http://localhost:4200
+    admin:
+      path: /api/admin/**
+      url: http://localhost:8081/admin
+      stripPrefix: true
+    account:
+      path: /api/account/**
+      url: http://localhost:8081/account
+      stripPrefix: true
+    patient:
+      path: /api/patient/**
+      url: http://localhost:8083/patient
+      stripPrefix: true

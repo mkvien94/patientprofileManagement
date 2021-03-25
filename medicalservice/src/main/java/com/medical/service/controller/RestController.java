@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @org.springframework.web.bind.annotation.RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping (path = "/medical")
 public class RestController {
 

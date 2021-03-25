@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @org.springframework.web.bind.annotation.RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping (path = "/patient")
 public class RestController {
 
@@ -43,6 +44,11 @@ public class RestController {
         }
     }
 
+    @GetMapping(path = "name/{name}")
+    public ResponseEntity<List<patientEntity>> findByFullName(@PathVariable String name) {
+        return new ResponseEntity<>(service.findByFullName(name), HttpStatus.OK);
+    }
+
     @PostMapping (path = "/save")
     public ResponseEntity<patientEntity> createNewPatient (@RequestBody patientEntity model) {
         try {
@@ -59,5 +65,21 @@ public class RestController {
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
+    }
+
+    @GetMapping(path = "/delete/{id}")
+    public ResponseEntity<String> delelePatient(@PathVariable Long id) {
+        service.remove(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @GetMapping(path = "/medical/{name}")
+    public ResponseEntity<List<patientEntity>> findByMedicalName(@PathVariable String name) {
+        return new ResponseEntity<>(service.findByMedicalName(name), HttpStatus.OK);
+    }
+
+    @GetMapping(path = "/disease/{name}")
+    public ResponseEntity<List<patientEntity>> findByDiseaseName(@PathVariable String name) {
+        return new ResponseEntity<>(service.findByDiseaseName(name), HttpStatus.OK);
     }
 }

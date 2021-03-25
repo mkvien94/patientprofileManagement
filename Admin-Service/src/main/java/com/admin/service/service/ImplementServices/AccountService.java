@@ -1,10 +1,12 @@
 package com.admin.service.service.ImplementServices;
 
 import com.admin.service.entity.ImplementEntity.AccountEntity;
+import com.admin.service.entity.ImplementEntity.PersonEntity;
 import com.admin.service.repository.AccountRepository;
 import com.admin.service.service.AbstractBasicService.AbstractService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,6 +17,14 @@ public class AccountService implements AbstractService<AccountEntity> {
     @Autowired
     private AccountRepository repository;
 
+    @Transactional(readOnly = true)
+    public String validate(String username, String password) {
+        AccountEntity accountEntity = repository.findByUsernameAndPassword(username, password);
+        if (accountEntity == null) {
+            throw new RuntimeException("Account not found");
+        }
+        return "{\"role\":\"" + accountEntity.getRole() + "\",\"code\":\"" + accountEntity.getId() + "\"}";
+    }
 
     @Override
     public List<AccountEntity> getAll() {

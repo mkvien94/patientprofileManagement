@@ -20,6 +20,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Gate-Way" target="11" />
+      <module name="medical-service" target="11" />
+      <module name="patients-web-app" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -29,7 +31,9 @@
       <module name="Gate-Way" options="-parameters" />
       <module name="Patient-Service" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="medical-service" options="-parameters" />
       <module name="medicalservice" options="-parameters" />
+      <module name="patients-web-app" options="-parameters" />
       <module name="patientservice" options="-parameters" />
       <module name="server" options="-parameters" />
       <module name="service (1) (com.admin)" options="-parameters" />

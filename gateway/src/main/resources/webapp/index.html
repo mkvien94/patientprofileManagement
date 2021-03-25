@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>USER</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+<div class="sidebar-nav">
+    <div class="well" style="width:300px; padding: 8px 0;">
+        <ul class="nav nav-list">
+            <li class="nav-header">Hi!<div id="result" th:text="${#session.getAttribute('account')}"> John Doe</div></li>
+            <li class="active" ><a href="index"><i class="icon-home"></i> Dashboard</a></li>
+            <li><a href="/user"><i class="icon-calendar"></i> Patient</a></li>
+            <li><a href="/view-medical"><i class="icon-user"></i> medical</a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    var username = document.getElementById("result").textContent;
+    sessionStorage.setItem("account", username);
+    console.log(username);
+</script>
+</body>
+</html>
